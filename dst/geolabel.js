@@ -9232,7 +9232,6 @@ var _user$project$GeoLabel$update = F2(
 	});
 var _user$project$GeoLabel$init = function (flags) {
 	var model = A4(_user$project$Type$Model, flags.lang, flags.field, flags.$class, _elm_lang$core$Maybe$Nothing);
-	var x = A2(_elm_lang$core$Debug$log, 'flags', flags);
 	return {
 		ctor: '_Tuple2',
 		_0: model,

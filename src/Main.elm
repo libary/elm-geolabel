@@ -9,7 +9,7 @@ import View exposing (..)
 init : Flags -> ( Model, Cmd Msg )
 init flags =
   let
-    x = Debug.log "flags" flags
+    --x = Debug.log "flags" flags
     model = Model flags.lang flags.field flags.class Nothing
   in
     (model, getGeoData model)--??как через Start?
