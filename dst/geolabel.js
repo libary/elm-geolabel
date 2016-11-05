@@ -9127,7 +9127,7 @@ var _user$project$Type$FetchFail = function (a) {
 var _user$project$Type$FetchSucceed = function (a) {
 	return {ctor: 'FetchSucceed', _0: a};
 };
-var _user$project$Type$Start = {ctor: 'Start'};
+var _user$project$Type$Fetch = {ctor: 'Fetch'};
 
 var _user$project$Helpers$geoServiceUrl = function (model) {
 	var baseUrl = 'http://ip-api.com/json';
@@ -9210,7 +9210,7 @@ var _user$project$GeoLabel$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		switch (_p0.ctor) {
-			case 'Start':
+			case 'Fetch':
 				return {
 					ctor: '_Tuple2',
 					_0: model,
@@ -9232,11 +9232,7 @@ var _user$project$GeoLabel$update = F2(
 	});
 var _user$project$GeoLabel$init = function (flags) {
 	var model = A4(_user$project$Type$Model, flags.lang, flags.field, flags.$class, _elm_lang$core$Maybe$Nothing);
-	return {
-		ctor: '_Tuple2',
-		_0: model,
-		_1: _user$project$Helpers$getGeoData(model)
-	};
+	return A2(_user$project$GeoLabel$update, _user$project$Type$Fetch, model);
 };
 var _user$project$GeoLabel$main = {
 	main: _elm_lang$html$Html_App$programWithFlags(

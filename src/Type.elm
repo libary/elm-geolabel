@@ -16,6 +16,6 @@ type alias Model =
   }
 
 type Msg
-  = Start
+  = Fetch
   | FetchSucceed String
   | FetchFail Http.Error

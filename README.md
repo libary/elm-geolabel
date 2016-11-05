@@ -1,5 +1,5 @@
 # elm-geolabel
 
-Demo https://libary.github.io/elm-geolabel/dst/index.html
+Отображает текущий регион пользователя
 
 $ elm make --output=dst/geolabel.js src/Main.elm

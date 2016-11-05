@@ -12,12 +12,12 @@ init flags =
     --x = Debug.log "flags" flags
     model = Model flags.lang flags.field flags.class Nothing
   in
-    (model, getGeoData model)--??как через Start?
+    update Fetch model
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    Start ->
+    Fetch ->
       ( model, getGeoData model )
     FetchSucceed value ->
       ( { model | value = Just value }, Cmd.none )
