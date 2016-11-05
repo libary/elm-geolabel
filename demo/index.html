@@ -8,11 +8,11 @@
   <h1>
     Ваш регион: <span id="geolabel"></span>
   </h1>
-  <script src="geolabel.js"></script>
+  <script src="geolabel.min.js"></script>
   <script>
       var node = document.getElementById('geolabel');
       var app = Elm.GeoLabel.embed(node, {
-          lang: 'ru',//а если не определен?
+          lang: 'ru',
           field: 'regionName',
           class: 'label label-success'
       });
