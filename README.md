@@ -1,10 +1,12 @@
 # elm-geolabel
 
-Отображает текущий регион пользователя
+Отображает город пользователя
 
-собрать:
+elm v0.18
+
+make:
 $ elm make --output=dst/geolabel.js src/Main.elm
 $ gulp
 
-демо:
-/demo/index.html
+demo:
+https://libary.github.io/elm-geolabel/demo/index.html

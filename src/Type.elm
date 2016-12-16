@@ -3,19 +3,16 @@ module Type exposing (..)
 import Http
 
 type alias Flags =
-  { lang : Maybe String
-  , field : String
-  , class : Maybe String
-  }
+    { field : List String
+    , class : Maybe String
+    }
 
 type alias Model =
-  { lang : Maybe String
-  , field : String
-  , class : Maybe String
-  , value : Maybe String
-  }
+    { field : List String
+    , class : Maybe String
+    , value : Maybe String
+    }
 
 type Msg
-  = Fetch
-  | FetchSucceed String
-  | FetchFail Http.Error
+    = Fetch
+    | FetchResult (Result Http.Error String)
