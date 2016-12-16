@@ -1,28 +1,20 @@
 module Helpers exposing (..)
 
 import Type exposing (..)
-import Task
 import Http
-import Json.Decode as Json
+import Json.Decode as Decode
 
 getGeoData : Model -> Cmd Msg
 getGeoData model =
-  let
-    url = geoServiceUrl model
-  in
-    Task.perform FetchFail FetchSucceed (Http.get (decodeGeoData model) url)
+    let
+        url = geoServiceUrl model
+    in
+        Http.send FetchResult (Http.get url (decodeGeoData model))
 
-decodeGeoData : Model -> Json.Decoder String
+decodeGeoData : Model -> Decode.Decoder String
 decodeGeoData model =
-  Json.at [model.field] Json.string
+    Decode.at model.field Decode.string
 
 geoServiceUrl : Model -> String
 geoServiceUrl model =
-  let
-    baseUrl = "http://ip-api.com/json"
-  in
-    case model.lang of
-      Nothing ->
-        baseUrl
-      Just lang ->
-        Http.url baseUrl [ ("lang", lang) ]
+    "https://js.maxmind.com/geoip/v2.1/city/me"
