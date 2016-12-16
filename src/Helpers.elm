@@ -17,4 +17,4 @@ decodeGeoData model =
 
 geoServiceUrl : Model -> String
 geoServiceUrl model =
-    "https://js.maxmind.com/geoip/v2.1/city/me"
+    "https://ipinfo.io/json"

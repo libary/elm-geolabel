@@ -9446,7 +9446,7 @@ var _user$project$Type$FetchResult = function (a) {
 var _user$project$Type$Fetch = {ctor: 'Fetch'};
 
 var _user$project$Helpers$geoServiceUrl = function (model) {
-	return 'https://js.maxmind.com/geoip/v2.1/city/me';
+	return 'https://ipinfo.io/json';
 };
 var _user$project$Helpers$decodeGeoData = function (model) {
 	return A2(_elm_lang$core$Json_Decode$at, model.field, _elm_lang$core$Json_Decode$string);
