@@ -2,7 +2,7 @@
 
 Отображает регион пользователя
 
-elm v0.18
+elm v0.18.0
 
 make:
 $ elm make --output=dst/geolabel.js src/Main.elm
